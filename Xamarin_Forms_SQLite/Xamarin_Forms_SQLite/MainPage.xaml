@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin_Forms_SQLite"
+             x:Class="Xamarin_Forms_SQLite.MainPage">
+    <StackLayout>
+        <Label Text="L'humeur du jour !!!" HorizontalTextAlignment="Center" />
+        <Label Text="Aujourd'hui, je suis de ..." />
+        <RadioButton x:Name="bonneHumeurRadio" Content="bonne humeur" IsChecked="True"/>
+        <RadioButton x:Name="mauvaiseHumeurRadio" Content="mauvaise humeur"/>
+        <Label Text="Décrivez votre humeur du jour en quelques mots..." />
+        <Entry x:Name="humeurEntry" />
+        <Button x:Name="humeurButton" Text="Ajouter" Clicked="HumeurButton_OnClicked"/>
+        <Label x:Name="message" />
+    </StackLayout>
+
+</ContentPage>

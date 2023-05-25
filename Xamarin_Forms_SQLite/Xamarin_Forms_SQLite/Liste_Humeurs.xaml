@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForm_SQLite.Liste_Humeurs">
+    <StackLayout>
+        <Label Text="Liste de vos humeurs !" HorizontalTextAlignment="Center" />
+        <Button x:Name="ListeHumeurButton" Text="Voir liste de vos humeurs" Clicked="ListeHumeurButton_Clicked"/>
+        <ListView x:Name="ListeHumeur" SelectionMode="Single" ItemTapped="HumeursListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Commentaire}" />
+                            <Label Text="{Binding DateAjout, StringFormat='{0:dd/MM/yyyy HH:mm}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="ViderButton" Text="Vider" Clicked="ViderButton_Clicked"/>
+    </StackLayout>
+</ContentPage>
